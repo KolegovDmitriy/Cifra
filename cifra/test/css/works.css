@@ -1,0 +1,453 @@
+@charset "utf-8";
+@font-face {
+  font-family: cifra;
+  /* Гарнитура шрифта */
+  src: url(fonts/555666.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+body {
+  margin: 0 auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+h1 {
+  line-height: 1;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  text-align: center;
+}
+
+.myh2 {
+  /* background-color: #CCC;  */
+  background-color: #e6e6fa;
+  line-height: 1;
+  margin-top: 0.1em;
+  margin-bottom: 0.2em;
+  text-align: center;
+  /* border: 2px solid black; */
+  font-size: 26px;
+  border-bottom: solid 1px #bed3db;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.block_plita {
+  display: block;
+  float: left;
+  border-collapse: separate;
+  float: left;
+  width: 204px;
+  height: 100px;
+  table-layout: fixed;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  border: 1px solid black;
+  overflow: hidden;
+  /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;
+  /* Добавляем многоточие */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font-family: "Times New Roman";
+}
+
+/* -- Разметка квадратика -- */
+
+.block_plita div {
+  display: inline;
+  float: left;
+  text-align: center;
+}
+
+.block_plita>div {
+  display: inline;
+  float: left;
+  width: 100%;
+  /* border: 0.1px solid black; */
+}
+
+.block_plita>div>p {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.count {
+  display: block;
+  float: left;
+  width: 86px;
+  padding: 3px 0 0 0px;
+  /* border: 0.1px solid black; */
+}
+
+/* -------------------------- */
+
+/* Расцветка квадратиков */
+
+.verybad {
+  background-color: #ff00ff;
+}
+
+.red {
+  background-color: #f00;
+}
+
+.green {
+  background-color: #0f0;
+}
+
+.yellow {
+  background-color: #ff0;
+}
+
+.greey {
+  width: 102px;
+  background-color: #bbb;
+  white-space: nowrap;
+  /* Запрещаем перенос строк */
+  overflow: hidden;
+  /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;
+  /* Добавляем многоточие */
+  font-weight: bold;
+}
+
+/* Расцветка квадратиков для инди */
+
+.indired {
+  background-color: #f00;
+  background-image: url(../images/indi.png);
+  background-repeat: no-repeat;
+}
+
+.indigreen {
+  background-color: #0f0;
+  background-image: url(../images/indi.png);
+  background-repeat: no-repeat;
+}
+
+.indiyellow {
+  background-color: #ff0;
+  background-image: url(../images/indi.png);
+  background-repeat: no-repeat;
+}
+
+.indigreey {
+  width: 102px;
+  border: 1px solid red;
+  background-image: url(../images/indi.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #bbb;
+  font-weight: bold;
+  white-space: nowrap;
+  /* Запрещаем перенос строк */
+  overflow: hidden;
+  /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;
+  /* Добавляем многоточие */
+}
+
+.indiverybad {
+  background-color: #ff00ff;
+  background-image: url(../images/indi.png);
+  background-repeat: no-repeat;
+}
+
+/* ---------------------- */
+
+/* -- Менюшка -- */
+
+.fullzakaz {
+  background-color: #fff;
+  width: 500px;
+  height: 00px;
+  text-align: center;
+  font-size: 14px;
+  border: solid 1px black;
+}
+
+.fullzakaz tr {
+  vertical-align: top;
+}
+
+.fullzakaz td {
+  vertical-align: top;
+}
+
+.fullzakaz h2 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.fullzakaz div {
+  font-size: 18px;
+}
+
+/* ---------------- */
+
+.nzakaz {
+  padding-left: 2px;
+  padding-bottom: 2px;
+  width: 104px;
+  font-size: 22px;
+  font-family: Impact;
+  font-weight: bold;
+  /* border:1px solid red; */
+}
+
+.zclose {
+  color: #66f;
+  font-weight: bold;
+  border-style: inset;
+  border-width: medium;
+  border-color: #66f;
+  border-spacing: 3px;
+  background-color: #cdd5f5;
+}
+
+/* Окно с параметрами заказа */
+
+.newlayers {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: -250px;
+  box-shadow: 0 24px 38px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.22);
+  background-color: #fbb;
+  border: solid 1px black;
+}
+
+.mmenu {
+  width: 100%;
+  height: 35px;
+  font-family: Tahoma;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+div.blink {
+  animation: blink 400ms alternate infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+.zname {
+  padding: 3px 0 2px 0;
+  white-space: nowrap;
+  /* Запрещаем перенос строк */
+  overflow: hidden;
+  /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;
+  /* Добавляем многоточие */
+}
+
+.zzakaz {
+  padding: 5px 0 5px 0;
+  font-size: 22px;
+  font-family: Impact;
+  font-weight: bold;
+  color: #666;
+}
+
+/* ------ Мои стили ----------- */
+
+/* SELECT для выбора пользователя */
+
+.user_s {
+  display: block !important;
+  float: left !important;
+}
+
+/* .user_s select {
+  font-size: 20px;
+  background-color: cadetblue;
+  border: 1px solid black;
+} */
+
+#request_result {
+  display: block;
+  float: left;
+}
+
+.workname {
+  float: left;
+  height: 15px;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+.button_op {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+}
+
+.modal_exit {
+  display: block;
+  float: right;
+}
+
+#workqty {
+  display: block;
+  float: left;
+  width: 150px !important;
+}
+
+.tiraj {
+  display: inline-block;
+  float: left;
+}
+
+.block_tiraj {
+  /* height: 20px; */
+  display: none;
+}
+
+.gl-tiraj h5 {
+  text-align: left;
+  padding-top: 5px;
+  /* display: none; */
+}
+
+.label-zakaz {
+  text-align: center;
+}
+
+#div-modal {
+  min-height: 200px;
+}
+
+.modal-header>h5 {
+  width: 275px;
+  word-wrap: break-word;
+}
+
+.clcheckbox {
+  display: none;
+}
+
+.btn-nzakaz {
+  font-size: 24px !important;
+  height: 30px;
+  line-height: 30px !important;
+  color: #000 !important;
+}
+
+.vibor-div {
+  border: 6px outset #00bfff !important;
+}
+
+#div-modal h2, h5 {
+  text-align: center;
+}
+
+.zakaz_v_plite {
+  border: 2px solid grey;
+  border-radius: 0.3rem;
+  /* padding: 1px 4px 1px 4px; */
+  font-size: 25px;
+  font-family: Impact;
+  font-weight: bold;
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.zakaz_v_plite input {
+  margin: 2px 5px 2px 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.zakaz_v_plite div {
+  display: block;
+  float: left;
+}
+
+.plita_edit {
+  border: 2px solid grey;
+  border-radius: 0.3rem;
+  text-align: center;
+  margin: auto;
+  width: 325px;
+  margin-bottom: 3px;
+}
+
+.plita_edit label:first-child {
+  margin-top: 5px;
+}
+
+.plita_edit div {
+  text-align: center;
+  /* margin-bottom: 3px; */
+}
+
+.plita_edit>div>button {
+  display: block;
+  float: left;
+}
+
+/* инпут для добавления заказа в плиту */
+
+.add_zakaz_v_plitu {
+  display: block;
+  float: right;
+  width: 120px !important;
+}
+
+.btn_plita_edit {
+  border: 2px solid grey;
+  border-radius: 0.3rem;
+  margin-top: 5px !important;
+  display: block;
+  margin: auto;
+  /* float: right; */
+  width: 325px;
+  padding: 3px;
+}
+
+.cifra_device {
+  display: block;
+  margin: auto;
+  color: #000 !important;
+  /* font-family: Impact !important; */
+  /* font-weight:bold !important; */
+}
+
+.user_id_menu {
+  position: sticky;
+  /* top:0%;  
+  width: 100%;
+  height: 46px;
+  background-color:red ;   */
+  /* --------- */
+  background-color: #b0c4de;
+  border-bottom: solid 1px #bed3db;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  /* position: relative; */
+  top: 0;
+  z-index: 51;
+  height: 46px;
+  /* width: 300px; */
+  /* margin: 0 auto; */
+  margin-bottom: 10px;
+  /* --------- */
+}
+
+.panel>h3 {
+  display: inline-block;
+  padding-top: 2px;
+}
